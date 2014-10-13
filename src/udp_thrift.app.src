@@ -1,0 +1,12 @@
+{application, udp_thrift,
+  [{description, "Example of using Thrift with UDP"},
+  {vsn, "1"},
+  {modules, [udp_thrift_types,
+             udp_thrift_app,
+             udp_thrift_common,
+             udp_thrift_sup,
+             udp_thrift_messaging,
+             udp_thrift_serialization]},
+  {registered, udp_thrift_sup},
+  {applications, [kernel, stdlib, crypto, thrift]},
+  {mod, {udp_thrift_app, []}}]}.
